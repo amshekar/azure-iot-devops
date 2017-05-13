@@ -1,0 +1,51 @@
+﻿<div class="row row-picture">
+    <h1 class="navbar-brand brand-name">
+        <span class="pull-left"><p class="list-group-item-text"><i class="glyphicon glyphicon-check">&nbsp;</i></span>iMinify PatientApp</p>
+
+
+    </h1>
+</div>
+<div class="row">
+    <div class="container-fluid">
+        <div class="bs-component">
+            <span class="pull-left"><a class="btn btn-success" ng-click="Modals.open()" title="Add Patient"><span class="mdi-social-person-add"></span></a></span>
+            <section class="col-md-8 pull-right"><input type="text" class="form-control input-lg" placeholder="Search" ng-model="search"></section>
+        </div>
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="bs-component">
+        <div class="list-group">
+            <div class="col-md-4" ng-repeat="Patient in Patients | filter:search | orderBy:'lastName'">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="list-group-item">
+                            <div class="row-picture">
+                                <img class="circle" src="http://lorempixel.com/56/56/people/{{$index}}" alt="icon" >
+                            </div>
+                            <div class="row-content">
+                                <h4 class="list-group-item-heading">{{Patient.fullName}}</h4>
+                                <p class="list-group-item-text"><i class="glyphicon glyphicon-info-sign">&nbsp;</i>{{Patient.careSpec}}</p> 
+                                <p class="list-group-item-text"><i class="glyphicon glyphicon-user">&nbsp;</i>{{Patient.gender}}</p>
+                                <p class="list-group-item-text"><i class="glyphicon glyphicon-phone">&nbsp;</i>{{Patient.phoneNo}}</p>
+                                <p class="list-group-item-text"><i class="glyphicon glyphicon-calendar">&nbsp;</i> {{Patient.dob}}  Age {{calculateAge(Patient.dob)}} yrs</p>
+                                
+                                <p class="list-group-item-text"><i class="glyphicon glyphicon-home">&nbsp;</i>{{Patient.address}}</p>                                                              
+                            </div>
+                            <div class="pull-right">
+                                <!--<a class="btn btn-xs btn-primary" ng-click="Modals.open(Patient)">-->
+                                <a class="btn btn-xs btn-primary" ng-click="{{alert('inprogress');}}" title="Edit Patient">
+                                    <span class="glyphicon glyphicon-edit"></span>
+                                </a>
+                                <a class="btn btn-xs btn-warning" ng-click="Modals.deletePatient(Patient.id)" title="Delete Patient">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

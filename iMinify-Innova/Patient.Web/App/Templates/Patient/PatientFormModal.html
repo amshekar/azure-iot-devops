@@ -1,0 +1,79 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title"> <span class="mdi-communication-Patients"></span> Patient Information</h3>
+</div>
+<div class="modal-body">
+    <form class="form-horizontal" name="PatientForm" method="post">
+        <fieldset>
+            <legend></legend>
+            <div class="form-group">
+                <label for="FullName" class="col-lg-3 control-label">Full name</label>
+                <div class="col-lg-7">
+                    <input type="text" class="form-control" id="FullName" name="FullName" placeholder="First name, Middle name, Last name" ng-model="Patient.FullName" required maxlength="100">
+                    <p ng-show="PatientForm.FullName.$invalid && !PatientForm.FullName.$pristine" class="help-block">First name is required.</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="lastname" class="col-lg-3 control-label">Date Of Birth</label>
+                <div class="col-lg-7">
+                    <input type="text" class="form-control" id="dob" name="dob" placeholder="dd/mm/yyyy" ng-model="Patient.dob" required>
+                    <p ng-show="PatientForm.dob.$invalid && !PatientForm.dob.$pristine" class="help-block">Data of Birth is required.</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email" class="col-lg-3 control-label">Age</label>
+                <div class="col-lg-7">
+                    <input type="email" class="form-control" disabled id="age" name="age" ng-model="calculateAge(Patient.dob)" required>
+                   
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="telephone" class="col-lg-3 control-label">Gender</label>
+                <div class="col-lg-7" style="display:inline-block">
+                    <span class="col-lg-2" style="display:inline">
+                        <input class="form-control" ng-model="Patient.gender" name="male" type="radio" value="male"> Male
+                    </span>
+                    <span class="col-lg-2">
+                        <input class="form-control" ng-model="Patient.gender" name="female" type="radio" value="female"> Female
+                    </span>
+                    <p ng-show="PatientForm.gender.$invalid && !PatientForm.gender.$pristine" class="help-block"> Gender is required.</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="mobile" class="col-lg-3 control-label">Phone no</label>
+                <div class="col-lg-7">
+                    <input type="text" class="form-control" id="PhoneNo" name="PhoneNo" placeholder="PhoneNo" ng-model="Patient.PhoneNo" required maxlength="10" allow-pattern="([0-9])">
+                    <p ng-show="PatientForm.PhoneNo.$invalid && !PatientForm.PhoneNo.$pristine" class="help-block"> Mobile no. is required.</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="address" class="col-lg-3 control-label">Address</label>
+                <div class="col-lg-7">
+                    <textarea type="text" class="form-control" row="5" id="address" name="address" placeholder="Address" ng-model="Patient.address" required maxlength="300" allow-pattern="[a-zA-Z/,\,#, ;,-“\r\n]"></textarea>
+                    <p ng-show="PatientForm.address.$invalid && !PatientForm.address.$pristine" class="help-block"> Address is required.</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="description" class="col-lg-3 control-label">Care specialization </label>
+                <div class="col-lg-7">
+                    <select class="form-control" ng-model="Patient.careSpec">
+                        <option value="">Select</option>
+                        <option value="Diabetics">Diabetics</option>
+                        <option value="Cardiac">Cardiac</option>
+                        <option value="General Physician">General Physician</option>
+                        <option value="Gynaecology">Gynaecology</option>
+                    </select>
+                  </div>
+            </div>
+            <div class="form-group">
+                <label for="profilepic" class="col-lg-3 control-label">Profile Pic</label>
+                <div class="col-lg-7">
+                    <div class="upoadimgbtn"><span class="addicon">+</span></div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-default" ng-click="cancel()">Cancel</button>
+    <button type="submit" class="btn btn-primary" ng-click="ok()" >Submit</button>
+</div>

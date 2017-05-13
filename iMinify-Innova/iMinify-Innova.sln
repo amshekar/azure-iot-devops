@@ -1,0 +1,96 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{23358972-3271-4CBF-97D9-5496D7B62EFC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{55AD3BDD-8BAC-4F7E-AD36-CF8B1FD50A06}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{F0568A94-EDB0-4AB4-85A9-AA6B211897B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patients.Core", "Patient.Core\Patients.Core.csproj", "{A186FAC9-0EC7-4D1A-9F02-201EE6623923}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patients.Services", "Patient.Services\Patients.Services.csproj", "{E462C316-5969-4346-A9F0-10A0155C1011}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patients.Data", "Patient.Data\Patients.Data.csproj", "{FC96D9C8-1EF6-4A60-81D9-FF58287BFE9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patients.Dto", "Patient.Dto\Patients.Dto.csproj", "{02BB1288-8EBD-4472-B4FB-20545EBF3535}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patients.Web", "Patient.Web\Patients.Web.csproj", "{8D0C5AD2-6F53-46FE-B594-9048D28D112C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patients.Web.Test", "Patients.Web.Test\Patients.Web.Test.csproj", "{B79936A9-3FA9-4DAD-AE8B-F03A7A498EAA}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://nithyanantham.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Patient.Core\\Patients.Core.csproj
+		SccProjectTopLevelParentUniqueName1 = iMinify-Innova.sln
+		SccProjectName1 = Patient.Core
+		SccLocalPath1 = Patient.Core
+		SccProjectUniqueName2 = Patient.Services\\Patients.Services.csproj
+		SccProjectTopLevelParentUniqueName2 = iMinify-Innova.sln
+		SccProjectName2 = Patient.Services
+		SccLocalPath2 = Patient.Services
+		SccProjectUniqueName3 = Patient.Data\\Patients.Data.csproj
+		SccProjectTopLevelParentUniqueName3 = iMinify-Innova.sln
+		SccProjectName3 = Patient.Data
+		SccLocalPath3 = Patient.Data
+		SccProjectUniqueName4 = Patient.Dto\\Patients.Dto.csproj
+		SccProjectTopLevelParentUniqueName4 = iMinify-Innova.sln
+		SccProjectName4 = Patient.Dto
+		SccLocalPath4 = Patient.Dto
+		SccProjectUniqueName5 = Patient.Web\\Patients.Web.csproj
+		SccProjectTopLevelParentUniqueName5 = iMinify-Innova.sln
+		SccProjectName5 = Patient.Web
+		SccLocalPath5 = Patient.Web
+		SccProjectUniqueName6 = Patients.Web.Test\\Patients.Web.Test.csproj
+		SccProjectTopLevelParentUniqueName6 = iMinify-Innova.sln
+		SccProjectName6 = Patients.Web.Test
+		SccLocalPath6 = Patients.Web.Test
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A186FAC9-0EC7-4D1A-9F02-201EE6623923}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A186FAC9-0EC7-4D1A-9F02-201EE6623923}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A186FAC9-0EC7-4D1A-9F02-201EE6623923}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A186FAC9-0EC7-4D1A-9F02-201EE6623923}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E462C316-5969-4346-A9F0-10A0155C1011}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E462C316-5969-4346-A9F0-10A0155C1011}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E462C316-5969-4346-A9F0-10A0155C1011}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E462C316-5969-4346-A9F0-10A0155C1011}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC96D9C8-1EF6-4A60-81D9-FF58287BFE9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC96D9C8-1EF6-4A60-81D9-FF58287BFE9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC96D9C8-1EF6-4A60-81D9-FF58287BFE9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC96D9C8-1EF6-4A60-81D9-FF58287BFE9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02BB1288-8EBD-4472-B4FB-20545EBF3535}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02BB1288-8EBD-4472-B4FB-20545EBF3535}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02BB1288-8EBD-4472-B4FB-20545EBF3535}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02BB1288-8EBD-4472-B4FB-20545EBF3535}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D0C5AD2-6F53-46FE-B594-9048D28D112C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D0C5AD2-6F53-46FE-B594-9048D28D112C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D0C5AD2-6F53-46FE-B594-9048D28D112C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D0C5AD2-6F53-46FE-B594-9048D28D112C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B79936A9-3FA9-4DAD-AE8B-F03A7A498EAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B79936A9-3FA9-4DAD-AE8B-F03A7A498EAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B79936A9-3FA9-4DAD-AE8B-F03A7A498EAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B79936A9-3FA9-4DAD-AE8B-F03A7A498EAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A186FAC9-0EC7-4D1A-9F02-201EE6623923} = {23358972-3271-4CBF-97D9-5496D7B62EFC}
+		{E462C316-5969-4346-A9F0-10A0155C1011} = {23358972-3271-4CBF-97D9-5496D7B62EFC}
+		{FC96D9C8-1EF6-4A60-81D9-FF58287BFE9B} = {55AD3BDD-8BAC-4F7E-AD36-CF8B1FD50A06}
+		{02BB1288-8EBD-4472-B4FB-20545EBF3535} = {55AD3BDD-8BAC-4F7E-AD36-CF8B1FD50A06}
+		{8D0C5AD2-6F53-46FE-B594-9048D28D112C} = {F0568A94-EDB0-4AB4-85A9-AA6B211897B3}
+		{B79936A9-3FA9-4DAD-AE8B-F03A7A498EAA} = {F0568A94-EDB0-4AB4-85A9-AA6B211897B3}
+	EndGlobalSection
+EndGlobal

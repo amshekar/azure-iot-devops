@@ -1,0 +1,88 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title">Patient Information</h3>
+</div>
+<div class="modal-body">
+    <form class="form-horizontal" name="PatientForm" novalidate>
+        <fieldset>
+            <legend></legend>
+            <div class="form-group">
+                <label for="FullName" class="col-lg-2 control-label">First name</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="FullName" name="FullName" placeholder="First name" ng-model="Patient.FullName" required>
+                    <p ng-show="PatientForm.FullName.$invalid && !PatientForm.FullName.$pristine" class="help-block">First name is required.</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="FullName" class="col-lg-2 control-label">Middle name</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="middlename" name="middlename" placeholder="First name" ng-model="Patient.middleName" required>
+                    <p ng-show="PatientForm.middlename.$invalid && !PatientForm.middlename.$pristine" class="help-block">Middle name is required.</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="lastname" class="col-lg-2 control-label">Last name</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="lastName" name="lastname" placeholder="Last name" ng-model="Patient.lastName" required>
+                    <p ng-show="PatientForm.lastname.$invalid && !PatientForm.lastname.$pristine" class="help-block">Last name is required.</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="col-lg-2 control-label">Email</label>
+                <div class="col-lg-10">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" ng-model="Patient.email" ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/" required>
+                    <p ng-show="PatientForm.email.$invalid && !PatientForm.email.$pristine" class="help-block"> Email is required. (e.g. email@email.com)</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="telephone" class="col-lg-2 control-label">Gender</label>
+                <div class="col-lg-10" style="display:inline-block" >
+                    <label>
+                        Male:
+                        <input class="form-control" ng-model="Patient.gender" name="male" type="radio" value="male">
+                    </label>
+                    <label>
+                        Female:
+                        <input  class="form-control" ng-model="Patient.gender" name="female" type="radio" value="female">
+                    </label>
+                    <p ng-show="PatientForm.gender.$invalid && !PatientForm.gender.$pristine" class="help-block"> Gender is required.</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="telephone" class="col-lg-2 control-label">Phone No</label>
+                <div class="col-lg-10">
+                   <input type="text" class="form-control" id="telephone" name="telephone" placeholder="telephone" ng-model="Patient.telephone">
+                    <p ng-show="PatientForm.telephone.$invalid && !PatientForm.telephone.$pristine" class="help-block"> Telephone no. is required.</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="mobile" class="col-lg-2 control-label">Mobile</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile" ng-model="Patient.mobilePhone" required>
+                    <p ng-show="PatientForm.mobile.$invalid && !PatientForm.mobile.$pristine" class="help-block"> Mobile no. is required.</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="address" class="col-lg-2 control-label">Address</label>
+                <div class="col-lg-10">
+                    <textarea type="text" class="form-control" id="address" name="address" placeholder="Address" allow-pattern="[a-z]" ng-model="Patient.address" required maxlength="300" ></textarea>
+                    <p ng-show="PatientForm.address.$invalid && !PatientForm.address.$pristine" class="help-block"> Address is required.</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                    <label for="profilepic" class="col-lg-2 control-label">Profile Pic</label>
+                    <div class="upoadimgbtn"><span class="addicon">+</span></div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-default" ng-click="">Cancel</button>
+    <button type="submit" class="btn btn-primary" ng-click="Commands.savePatient(Patient)" ng-disabled="PatientForm.$invalid">Submit</button>
+</div>

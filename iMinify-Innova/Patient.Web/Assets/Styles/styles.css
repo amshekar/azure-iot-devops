@@ -1,0 +1,35 @@
+﻿.sm-m-top{
+    margin-top : 1em;
+}
+.m-m-top{
+    margin-top : 3em;
+}
+.lg-m-top{
+    margin-top : 5em;
+}
+
+.addicon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #2dc195;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    margin: -15px 0 0 -15px;
+    color: #2dc195;
+    line-height: 25px;
+}
+
+.upoadimgbtn {
+    position: relative;
+    width: 50%;
+    border: 1px solid #c1c1c1;
+    max-width: 130px;
+    max-height: 125px;
+    min-height: 120px;
+    text-align: center;
+    cursor: pointer;
+}

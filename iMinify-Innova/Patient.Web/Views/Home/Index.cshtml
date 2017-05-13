@@ -1,0 +1,46 @@
+﻿@{Layout = null;}
+
+
+<!DOCTYPE html>
+<html ng-app="PatientApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>iMinify - Patient App</title>
+    @Styles.Render("~/Assets/Styles/CSS")
+</head>
+<body ng-controller="GlobalController">
+   
+    <div class="container">
+        
+        <ng-view>
+        </ng-view>
+
+        <hr />
+        <footer class="footer">
+            <div class="row">
+                <div class="col-md-6">
+                    &copy; @DateTime.Now.Year - Developed by Humana Innova Team
+                </div>
+            </div>
+        </footer>
+        <br />
+    </div>
+    <script src="~/Assets/Scripts/arrive.js"></script>
+    @Scripts.Render("~/Assets/Scripts/JS")
+    <script src="~/App/Directives/allowPattern.js"></script>
+    <script src="~/App/Services/Interceptors/errorHandler.js"></script>
+    <script src="~/App/Services/Interceptors/xmlHttpInterceptor.js"></script>
+    <script src="~/App/Route/routeConfig.js"></script>
+    <script src="~/App/Services/Patient/PatientService.js"></script>
+    <script src="~/App/Controllers/Global/globalController.js"></script>
+    <script src="~/App/Controllers/Patient/PatientController.js"></script>
+    <script src="~/App/Controllers/Patient/PatientFormModalController.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.material.init();
+        });
+    </script>
+</body>
+</html>
